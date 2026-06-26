@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Yes3 CraftBox | Fine Art Materials & Craft Supplies Chennai</title>
+    <meta name="title" content="Yes3 CraftBox | Fine Art Materials & Craft Supplies Chennai">
+    <meta name="description" content="Your one-stop shop for art supplies, stationery, party decors, unique gifts, and toys in Pallikaranai, Chennai. Quality materials at affordable rates.">
+    <meta name="keywords" content="Art supplies Chennai, Craft store Pallikaranai, Stationery, Party Decors, Yes3 CraftBox, Fine Art Materials">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yes3craftbox.com/">
+    <meta property="og:title" content="Yes3 CraftBox | Fine Art Materials & Craft Supplies">
+    <meta property="og:description" content="Explore premium art supplies, unique gifts, and stationery at Yes3 CraftBox, Chennai.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Yes3 CraftBox | Fine Art Materials & Craft Supplies">
+    <meta property="twitter:description" content="Explore premium art supplies, unique gifts, and stationery at Yes3 CraftBox, Chennai.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
+
+    <style>
+        :root {
+            /* Color Palette */
+            --bg-color: #F7F7F5;
+            --surface-color: #FFFFFF;
+            --text-main: #1A1A1A;
+            --text-muted: #555555;
+            --accent-color: #4C7C7D;
+            --accent-hover: #3A5F60;
+            --border-color: #E0E0DE;
+            --error-color: #D93025;
+            --success-color: #1E8E3E;
+            
+            /* Spacing & Scaling */
+            --space-unit: 1rem;
+            --radius: 12px;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --max-width: 1100px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --surface-color: #1E1E1E;
+                --text-main: #F5F5F5;
+                --text-muted: #B0B0B0;
+                --accent-color: #6DA5A6;
+                --border-color: #333333;
+            }
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { 
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Accessibility: Skip to content */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent-color);
+            color: white;
+            padding: 8px;
+            z-index: 1001;
+            transition: top 0.2s;
+        }
+        .skip-link:focus { top: 0; }
+
+        /* Typography */
+        h1, h2, h3 { font-weight: 700; line-height: 1.2; margin-bottom: 1rem; letter-spacing: -0.02em; }
+        h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); }
+        p { margin-bottom: 1.25rem; color: var(--text-muted); }
+
+        /* Layout Components */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section { padding: 5rem 0; }
+
+        /* Header & Nav */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(var(--bg-color), 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            height: 70px;
+            display: flex;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover { color: var(--accent-color); }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background: #E0E0DE;
+            border-radius: var(--radius);
+            object-fit: cover;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+            box-shadow: 0 4px 14px rgba(76, 124, 125, 0.4);
+        }
+
+        .btn-primary:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--surface-color);
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover { border-color: var(--accent-color); transform: translateY(-5px); }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-highlights {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .about-highlights li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .about-highlights li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--surface-color);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-style: normal;
+        }
+
+        .avatar {
+            width: 48px;
+            height: 48px;
+            background: var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* Pricing Section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            background: var(--surface-color);
+            padding: 3rem 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            text-align: center;
+            position: relative;
+        }
+
+        .pricing-card.recommended {
+            border: 2px solid var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        .badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-color);
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+        }
+
+        .price { font-size: 2.5rem; font-weight: 800; margin: 1rem 0; color: var(--accent-color); }
+        .price span { font-size: 1rem; color: var(--text-muted); }
+
+        .pricing-features {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .pricing-features li { margin-bottom: 0.75rem; font-size: 0.9rem; }
+
+        /* Accordion */
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        .faq-item { margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); }
+        
+        .faq-trigger {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-content p { padding-bottom: 1.5rem; }
+
+        /* Contact Form */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .form-group { margin-bottom: 1.5rem; }
+        label { display: block; margin-bottom: 0.5rem; font-weight: 500; font-size: 0.9rem; }
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--surface-color);
+            color: var(--text-main);
+            font-family: inherit;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(76, 124, 125, 0.1);
+        }
+
+        .error-msg { color: var(--error-color); font-size: 0.8rem; margin-top: 0.25rem; display: none; }
+        .success-state {
+            display: none;
+            background: var(--success-color);
+            color: white;
+            padding: 1rem;
+            border-radius: var(--radius);
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--surface-color);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo { font-weight: 800; font-size: 1.5rem; margin-bottom: 1rem; display: block; text-decoration: none; color: var(--text-main); }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.5rem; }
+        .footer-links a { text-decoration: none; color: var(--text-muted); transition: var(--transition); }
+        .footer-links a:hover { color: var(--accent-color); }
+
+        .copyright {
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            .hero, .about-content, .contact-container, .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--surface-color);
+                flex-direction: column;
+                padding: 2rem;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .nav-links.active { display: flex; }
+            .menu-toggle { display: block; }
+            .pricing-card.recommended { transform: none; }
+            .hero-image { order: -1; height: 300px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Yes3 CraftBox</a>
+                <button class="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-list">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+                </button>
+                <ul class="nav-links" id="nav-list">
+                    <li><a href="#features">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#pricing">Workshops</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="container hero">
+            <div>
+                <h1>Unleash Your Creativity with Fine Arts.</h1>
+                <p>Your premium destination for high-quality art supplies, stationery, and unique gifts in Pallikaranai, Chennai. We empower artists, students, and hobbyists with the finest tools.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <a href="#contact" class="btn btn-primary">Visit Our Store</a>
+                    <a href="#about" class="btn" style="border: 1px solid var(--border-color);">Learn More</a>
+                </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80" 
+                 alt="Art supplies arranged aesthetically on a desk" 
+                 class="hero-image" loading="eager" width="800" height="400">
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 id="features-heading">Everything for Your Art Needs</h2>
+                <p>Curated collections for every creative project.</p>
+            </div>
+            <div class="features-grid" aria-labelledby="features-heading">
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">🎨</span>
+                    <h3>Fine Art Materials</h3>
+                    <p>Professional-grade oils, acrylics, canvases, and brushes for serious artists.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">✂️</span>
+                    <h3>Craft Supplies</h3>
+                    <p>From DIY project kits to essential hobby tools and embellishments.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">📐</span>
+                    <h3>Stationery</h3>
+                    <p>Premium office and school essentials that make work a little more beautiful.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">🎁</span>
+                    <h3>Unique Gifts</h3>
+                    <p>Hand-picked toys and creative gift items you won't find anywhere else.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" style="background: var(--surface-color);">
+            <div class="container about-content">
+                <img src="https://images.unsplash.com/photo-1456086272160-b28b0645b729?auto=format&fit=crop&w=800&q=80" 
+                     alt="Inside the Yes3 CraftBox store" 
+                     class="hero-image" loading="lazy" width="800" height="400">
+                <div>
+                    <h2>Our Creative Mission</h2>
+                    <p>Yes3 CraftBox is a women-owned local hub in Chennai dedicated to fostering creativity. Located conveniently on Velachery Main Road, we bridge the gap between imagination and reality by providing affordable, high-quality materials for everyone from school children to professional artists. We take pride in being a "One-Stop Shop" for art, crafts, and party needs.</p>
+                    <ul class="about-highlights">
+                        <li>Women-Owned & LGBTQ+ Friendly</li>
+                        <li>Affordable, Wholesale-competitive Pricing</li>
+                        <li>Expert advice from our friendly staff</li>
+                        <li>In-store shopping & Quick Delivery</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">What Our Artists Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"One stop shop for all Art, crafts, projects, painting, hobbies, electronic projects & party supplies. Excellent collection!"</p>
+                    <div class="testimonial-author">
+                        <div class="avatar">AG</div>
+                        <div><strong>Aakaash Gollapudi</strong><br><small>Local Guide</small></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Amazing collection of craft items all under one roof. The service was excellent, and special thanks to Venkatesh and Fatima for their support."</p>
+                    <div class="testimonial-author">
+                        <div class="avatar">C</div>
+                        <div><strong>Chandran</strong><br><small>Verified Customer</small></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Creative Workshop Packages</h2>
+            <p style="text-align: center; margin-bottom: 3rem;">Join our community classes or stock up with curated kits.</p>
+            <div class="pricing-grid">
+                <article class="pricing-card">
+                    <h3>Starter Kit</h3>
+                    <div class="price">₹499<span>/one-time</span></div>
+                    <ul class="pricing-features">
+                        <li>Basic Acrylic Set (6 colors)</li>
+                        <li>Set of 3 synthetic brushes</li>
+                        <li>A5 Drawing Pad</li>
+                        <li>Store discount card</li>
+                    </ul>
+                    <a href="#contact" class="btn" style="border: 1px solid var(--accent-color);">Order Now</a>
+                </article>
+                <article class="pricing-card recommended">
+                    <span class="badge">Most Popular</span>
+                    <h3>Artist Pro Kit</h3>
+                    <div class="price">₹1,299<span>/one-time</span></div>
+                    <ul class="pricing-features">
+                        <li>Full Oil/Acrylic Palette</li>
+                        <li>Set of 10 professional brushes</li>
+                        <li>2 Medium Stretched Canvases</li>
+                        <li>Access to 1 Art Demo session</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get the Best Value</a>
+                </article>
+                <article class="pricing-card">
+                    <h3>Workshop Pass</h3>
+                    <div class="price">₹2,499<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li>Weekly guided art classes</li>
+                        <li>All materials included</li>
+                        <li>Priority new arrival alerts</li>
+                        <li>Free delivery on all orders</li>
+                    </ul>
+                    <a href="#contact" class="btn" style="border: 1px solid var(--accent-color);">Sign Up</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq1">
+                        Where is the store located?
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div id="faq1" class="faq-content">
+                        <p>We are located at 198, Velachery Main Rd, Pallikaranai, Chennai, near the Oil Mill Bus Stop, just above Tillu Juices.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq2">
+                        Do you provide home delivery?
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div id="faq2" class="faq-content">
+                        <p>Yes! We offer local delivery within Chennai. You can call us or message us to place your order.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq3">
+                        What are your working hours?
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div id="faq3" class="faq-content">
+                        <p>We are generally open from 10:00 AM to 9:30 PM daily. Note that hours may vary on public holidays like Ashura.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq4">
+                        Do you offer bulk discounts for schools?
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div id="faq4" class="faq-content">
+                        <p>Yes, we offer special pricing for bulk orders, schools, and educational projects. Contact us for a quote.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container">
+            <div class="contact-container">
+                <div>
+                    <h2>Get In Touch</h2>
+                    <p>Have a specific requirement or want to check stock? Drop us a message and our team will get back to you shortly.</p>
+                    <div style="margin-top: 2rem;">
+                        <p><strong>Call:</strong> 063839 33639</p>
+                        <p><strong>Email:</strong> hello@yes3craftbox.com</p>
+                        <p><strong>Location:</strong> Pallikaranai, Chennai - 600100</p>
+                    </div>
+                </div>
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required placeholder="Your Name">
+                        <span class="error-msg" id="nameError">Please enter your name.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="email@example.com">
+                        <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required placeholder="How can we help you?"></textarea>
+                        <span class="error-msg" id="messageError">Please enter your message.</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    <div class="success-state" id="formSuccess" role="status">
+                        Thank you! Your message has been sent successfully.
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <a href="#" class="footer-logo">Yes3 CraftBox</a>
+                <p>Empowering the creative community of Chennai with premium materials and artistic inspiration.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem;">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#features">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#pricing">Workshops</a></li>
+                    <li><a href="#contact">Store Locator</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem;">Social</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; <span id="currentYear"></span> Yes3 CraftBox. All rights reserved. Fine Art Materials, Craft Supplies, Stationery & More.
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            navList.classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // --- FAQ Accordion ---
+        const faqTriggers = document.querySelectorAll('.faq-trigger');
+
+        faqTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const content = trigger.nextElementSibling;
+                const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+                // Close other open items
+                faqTriggers.forEach(other => {
+                    if (other !== trigger) {
+                        other.setAttribute('aria-expanded', 'false');
+                        other.nextElementSibling.style.maxHeight = null;
+                        other.querySelector('span').textContent = '+';
+                    }
+                });
+
+                // Toggle current item
+                trigger.setAttribute('aria-expanded', !isExpanded);
+                if (!isExpanded) {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    trigger.querySelector('span').textContent = '-';
+                } else {
+                    content.style.maxHeight = null;
+                    trigger.querySelector('span').textContent = '+';
+                }
+            });
+        });
+
+        // --- Contact Form Validation ---
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            const fields = [
+                { id: 'name', errorId: 'nameError', validate: (v) => v.length > 0 },
+                { id: 'email', errorId: 'emailError', validate: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+                { id: 'message', errorId: 'messageError', validate: (v) => v.length > 0 }
+            ];
+
+            fields.forEach(field => {
+                const input = document.getElementById(field.id);
+                const error = document.getElementById(field.errorId);
+                if (!field.validate(input.value)) {
+                    error.style.display = 'block';
+                    isValid = false;
+                } else {
+                    error.style.display = 'none';
+                }
+            });
+
+            if (isValid) {
+                // Simulate form submission
+                contactForm.querySelector('button').disabled = true;
+                contactForm.querySelector('button').textContent = 'Sending...';
+                
+                setTimeout(() => {
+                    contactForm.reset();
+                    contactForm.querySelector('button').style.display = 'none';
+                    formSuccess.style.display = 'block';
+                }, 1500);
+            }
+        });
+
+        // --- Global Utils ---
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Basic Analytics Hook (Placeholder)
+        // console.log("Analytics initialized.");
+    </script>
+</body>
+</html>
